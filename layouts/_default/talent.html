@@ -1,0 +1,33 @@
+<html>
+
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body>
+
+    {{ partial "navigation.html" . }}
+
+    <div class="w-full bg-gradient-to-b from-agora-talent-light to-white min-h-[450px]">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="md:grid md:grid-cols-7 md:gap-8 py-20">
+          <div class="col-span-4">
+            <h1 class="text-5xl font-medium mb-5 text-agora-talent-dark">Бъди забелязан от топ компании</h1>
+            <div class="mb-20">
+              <p class="font-medium text-xl">
+                Работи по състезания и онлайн проекти от бизнеса. Впечатли и получи награда или предложение за работа.
+              </p>
+            </div>
+            <div>
+              <a href="#" class="bg-agora-talent-dark py-2 px-12 inline-block text-sm text-white rounded-3xl hover:bg-white hover:text-agora-talent-dark border border-agora-talent-dark transition-all">Започни сега</a>
+            </div>
+          </div>
+          <div class="col-span-3 hidden md:block">
+            <img class="w-full" src="{{ "/images/talents.svg" | absURL }}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {{ partial "footer.html" . }}

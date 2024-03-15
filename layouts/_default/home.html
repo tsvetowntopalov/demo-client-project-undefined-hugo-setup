@@ -1,0 +1,88 @@
+<html lang="{{ .Site.LanguageCode }}">
+
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body class="overflow-x-hidden">
+
+    {{ partial "navigation.html" . }}
+
+    
+
+    <!-- START: Heading -->
+    <div class="relative bg-gray-100/1">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="bg-agora-green-light w-full h-full absolute top-0 right-0 left-1/2 -translate-x-full"></div>
+        <div class="relative z-10 pr-8 min-h-[430px]">
+          <div class="absolute top-0 w-full h-full bg-agora-green-light sm:-translate-x-1/4 rounded-2xl">
+            <img class="absolute right-14 top-1" src="{{ "/images/group1.svg" | absURL }}">
+            <img class="absolute top-full -translate-y-3/4 -right-96 w-full max-w-[700px] hidden sm:block" src="{{ "/images/group2.svg" | absURL }}" alt="Group">
+          </div>
+          <div class="relative z-10 py-20">
+            <h1 class="text-white w-3/6 font-medium text-6xl">Където младото поколение и бизнеса се срещат!</h1>
+            <a class="mt-28 inline-block text-white border-white border px-12 py-2 rounded-3xl text-sm hover:text-agora-green-light hover:bg-white transition-all" href="#learn-more">Научи повече</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Heading -->
+
+
+    <div class="container mx-auto px-4 max-w-7xl mt-56 overflow-hidden" id="learn-more">
+      <div class="bg-agora-talent-light max-w-lg p-10 rounded-2xl relative">
+        <h2 class="font-medium text-2xl">За Таланти</h2>
+        <div class="mt-10 max-w-md">Бъди забелязан от топ компании!<br /><br />Започни кариерата си на A-gora.</div>
+        <div class="mt-36">
+          <a href="{{ .Site.Params.registerUrlTalent }}" class="inline-block bg-white text-agora-talent-dark border-agora-talent-dark border px-12 py-2 rounded-3xl text-sm hover:text-white hover:bg-agora-talent-dark transition-all">Включи се</a>
+          <a href="{{ "/talent" | relLangURL  }}" class="inline-block  px-8 py-2 rounded-3xl text-sm  transition-all">Научи повече</a>
+        </div>
+        <img class="absolute top-10 left-full -translate-x-36 max-h-[300px] hidden sm:block" src="{{ "/images/talents.svg" | absURL }}">
+      </div>
+    </div>
+
+
+    <div class="container mx-auto px-4 max-w-7xl mt-10 overflow-hidden">
+      <div class="bg-agora-company-light max-w-lg p-10 rounded-2xl relative float-right">
+        <h2 class="font-medium text-2xl">За Компании</h2>
+        <div class="mt-10 max-w-md">Свържете се с утрешните професионалисти сега.<br /><br />Директен достъп до стотици млади таланти за твоя бизнес</div>
+        <div class="mt-36">
+          <a href="{{ .Site.Params.registerUrlCompany }}" class="inline-block bg-white text-agora-green-light border-agora-green-light border px-12 py-2 rounded-3xl text-sm hover:text-white hover:bg-agora-green-light transition-all">Включи се</a>
+          <a href="{{ "/company" | relLangURL  }}" class="inline-block  px-8 py-2 rounded-3xl text-sm  transition-all">Научи повече</a>
+        </div>
+        <img class="absolute top-5 right-full translate-x-10 max-h-[340px] hidden sm:block" src="{{ "/images/companies.svg" | absURL }}">
+      </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+
+
+<!--
+WTF
+
+  <h2>{{ .Title }}</h2>
+
+  {{ range slice "foo" "bar" }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  {{ with "baz" }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+
+
+  <ul>
+    {{ range .Site.Languages }}
+      <li>{{ .Title }} ({{ .LanguageName }})</li>
+    {{ end }}
+  </ul>
+
+
+  CURRENT: {{ .Site.Language.Title }}
+
+  {{ i18n "whatsInThis" . }}
+-->
+  </body>
+
+</html>

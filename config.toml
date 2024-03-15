@@ -1,0 +1,24 @@
+baseURL = 'http://localhost/'
+theme = 'agora'
+languageCode = 'en-us'
+title = 'A-GORA'
+defaultContentLanguage = 'bg'
+defaultContentLanguageInSubdir = true
+[params]
+  loginUrl = "https://app.a-gora.com/auth/login"
+  registerUrl = "https://app.a-gora.com/auth/signup"
+  registerUrlTalent = "https://app.a-gora.com/auth/signup?as=talent"
+  registerUrlCompany = "https://app.a-gora.com/auth/signup?as=business"
+[languages]
+  [languages.bg]
+    languageCode = 'bg-BG'
+    languageDirection = 'ltr'
+    languageName = 'Български'
+    title = 'А-ГОРА'
+    weight = 1
+  [languages.en]
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    title = 'A-GORA'
+    weight = 2

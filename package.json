@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "hugo": "hugo server",
+        "tailwind": "npm run --prefix ./themes/agora watch",
+        "start": "concurrently \"npm run hugo\" \"npm run tailwind\""
+      }
+}
