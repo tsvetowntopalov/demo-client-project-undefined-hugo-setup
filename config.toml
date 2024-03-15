@@ -4,6 +4,7 @@ languageCode = 'en-us'
 title = 'A-GORA'
 defaultContentLanguage = 'bg'
 defaultContentLanguageInSubdir = true
+canonifyURLs = true
 [params]
   loginUrl = "https://app.a-gora.com/auth/login"
   registerUrl = "https://app.a-gora.com/auth/signup"
