@@ -28,6 +28,7 @@ module.exports = {
         'agora-green-light':    '#008D91',
         'agora-talent-light':   '#FFF6D5',
         'agora-talent-dark':    '#C99603',
+        'agora-talent-color':    '#FBBC05',
         // 'agora-green-talent':   '#CCE8E9',
         'agora-company-light':   '#CCE8E9',
         // 'agora-yellow-company': '#FFF6D5',
