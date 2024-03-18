@@ -19,13 +19,137 @@
               </p>
             </div>
             <div>
-              <a href="#" class="bg-agora-green-dark py-3 px-12 inline-block text-sm text-white rounded-3xl hover:bg-white hover:text-agora-green-dark border border-agora-green-dark transition-all">Започни сега</a>
+              <a href="{{ .Site.Params.registerUrlCompany }}" class="bg-agora-green-dark py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-green-dark border border-agora-green-dark transition-all">Започни сега</a>
             </div>
           </div>
           <div class="col-span-3 hidden md:block">
             <img class="w-full max-h-[350px]" src="{{ "images/companies.svg" | absURL }}">
           </div>
         </div>
+      </div>
+    </div>
+
+
+    <div class="container mx-auto px-4 max-w-7xl pt-36">
+      <div class="mb-10 text-center">
+        <h2 class="font-semibold text-3xl mb-3">Защо да се включиш в @-GORA</h2>
+        <div><small class="text-sm block">Ползите за всеки бизнес да стане част от най-бързо развиващата се мрежа свързваща таланти с бизнеси</small></div>
+      </div>
+      <div>
+        <div class="md:grid lg:grid-cols-4 sm:grid-cols-3 md:gap-8">
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-users" "headerText" "Пул от таланти" "descriptionText" "Достъп до база от млади професионалисти.") }}
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-user-check" "headerText" "Пре-скрийнинг" "descriptionText" "Таланти с проверени качества и умения.") }}
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-chart-line" "headerText" "Проследяемост" "descriptionText" "Следите развитието на талантите във времето.") }}
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-handshake" "headerText" "Свързаност" "descriptionText" "Създавате дългосрочни  отношения.") }}
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-clock" "headerText" "Гъвкавост" "descriptionText" "Всички дейности са дистанционни") }}
+          {{ partial "square-hover-block-company.html" (dict "imageURL" "la-bullhorn" "headerText" "Брандинг" "descriptionText" "Позициониране на компанията пред таланти.") }}
+          <div class="lg:col-span-2 sm:col-span-3">
+            <div class="mb-5 min-h-60 p-8 rounded-2xl overflow-hidden  border-none border-agora-company-light relative bg-gradient-to-r from-agora-company-light to-white transition-all">
+              <img class="absolute max-w-[700px] right-48 top-1 opacity-10 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
+              <div class="relative">
+                <h3 class="font-semibold text-lg mb-10">Създай своя бизнес профил сега</h3>
+                <a href="{{ .Site.Params.registerUrlCompany }}" class="bg-agora-green-dark py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-green-dark border border-agora-green-dark transition-all">Започни сега</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PRICING TABLES -->
+    <div class="container mx-auto px-4 max-w-7xl pt-36">
+      <div class="mb-10 text-center">
+        <img class="w-full max-h-[150px]" src="{{ "images/pigbank.svg" | absURL }}">
+        <h2 class="font-semibold text-3xl mb-3">Планове за бизнеса</h2>
+        <div><small class="text-sm block">Ползите за всеки бизнес да стане част от най-бързо развиващата се мрежа свързваща таланти с бизнеси</small></div>
+      </div>
+      <div class="md:grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-8">
+        <div class="mb-4 bg-gray-700 p-4 pb-28 relative rounded-lg  lg:col-span-1 sm:col-span-2 min-h-96">
+          <div class="absolute w-full h-full top-0 left-0 rounded-lg opacity-20 bg-cover bg-left" style="background-image:url({{ "images/getty-1138451176-rf-rgb.jpg" | absURL }})"></div>
+          <h2 class="font-semibold text-3xl text-white relative mt-8 px-4">Запознайте се с нашите планове за използване на платформата от бизнеса</h2>
+        </div>
+        <div class="mb-4 bg-agora-company-light/30 shadow-white hover:shadow-2xl hover:shadow-agora-company-light transition-all p-4 pb-28 relative rounded-lg">
+          <img class="w-full max-h-[100px] mt-8" src="{{ "images/forest-small.svg" | absURL }}">
+          <h2 class="text-center font-bold text-xl text-agora-green-dark">Безплатен</h2>
+          <ul class="p-4 mt-4 list-disk text-agora-green-dark/90 text-sm font-medium">
+            <li class="py-1.5">Преглед и търсене на таланти</li>
+            <li class="py-1.5">Публикуване на статии</li>
+            <li class="py-1.5">Достъп до безплатно съдържание</li>
+          </ul>
+          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-green-light hover:bg-agora-green-light/90 text-center text-sm font-medium rounded-3xl text-white" href="#">Запишeте се сега</a> 
+        </div>
+        <div class="mb-4 bg-agora-company-light/50 shadow-sm shadow-white hover:shadow-2xl hover:shadow-agora-company-light transition-all p-4 pb-28 relative rounded-lg">
+          <img class="w-full max-h-[100px] mt-8" src="{{ "images/forest.svg" | absURL }}">
+          <h2 class="text-center font-bold text-xl text-agora-green-dark">Професионален</h2>
+          <ul class="p-4 mt-4 list-disk text-agora-green-dark/90 text-sm font-medium">
+            <li class="py-1.5 font-semibold">+ Всичко от "Безплатен" план</li>
+            <li class="py-1.5">Публикуване на проекти</li>
+            <li class="py-1.5">Публикуване на състезания</li>
+            <li class="py-1.5">Контакти с таланти</li>
+            <li class="py-1.5">Брандиран профил на компанията</li>
+          </ul>
+          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-talent-color hover:bg-agora-talent-color/90 text-center text-sm font-medium rounded-3xl text-white" href="#">Свържете се с нас</a> 
+        </div>
+      </div>
+      <div>
+        <small class="text-sm block text-center py-4 text-gray-400 font-medium">
+          За персонализирана оферта моля свържете се с нас на <a href="mailto:support@a-gora.com" class="text-agora-green-light font-bold">support@a-gora.com</a>
+        </small>
+      </div>
+    </div>
+
+
+    
+    <div class="container mx-auto px-4 max-w-7xl pt-36">
+      <div class="mb-10">
+        <h2 class="font-semibold text-3xl mb-3">Възможности на платформата</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
+        {{ partial "company-features.html" (dict "Icon" "la-user-circle" "descriptionTitle" "Разглеждане" "descriptionText" "Разглеждате профили с портфолио на талантите") }}
+        {{ partial "company-features.html" (dict "Icon" "la-trophy" "descriptionTitle" "Ангажиране" "descriptionText" "Ангажирате таланти чрез състезания и проекти с награди") }}
+        {{ partial "company-features.html" (dict "Icon" "la-check-square" "descriptionTitle" "Тестване" "descriptionText" "Тествате практическите знания и умения на талантите") }}
+        {{ partial "company-features.html" (dict "Icon" "la-bullhorn" "descriptionTitle" "Позициониране" "descriptionText" "Позиционирате компанията пред активни младежи") }}
+        {{ partial "company-features.html" (dict "Icon" "la-user-check" "descriptionTitle" "Свързаност" "descriptionText" "Свързвате се с избрани от вас профили") }}
+        {{ partial "company-features.html" (dict "Icon" "la-lightbulb" "descriptionTitle" "Съдържание" "descriptionText" "Създавате съдържание за вашия бизнес и индустрия ") }}
+      </div>
+    </div>
+
+    <!-- COLORED GRAPH BLOCK -->
+    <div class="pt-36">
+      <div class="w-full bg-agora-green-light min-h-96 relative py-10">
+        <div class="mx-auto px-4 max-w-7xl">
+          <h2 class="font-thin text-7xl mb-8 text-agora-green-dark uppercase">Как работи @-GORA</h2>
+        </div>
+        <img class="absolute max-w-[1100px] w-3/4 -left-5 top-1 opacity-20 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
+        <div class="container mx-auto px-4 max-w-7xl relative">
+          <div class="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "1" "titleText" "Създайте профил на компанията" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Създай профил") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "2" "titleText" "Публикувайте състезание или проект" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Публикувай състезание") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "3" "titleText" "Възнаградете най-добрите таланти с награда или с предложение за работа" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Възнагради таланти") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "4" "titleText" "Търсете в базата данни с таланти, харесайте и създайте контакти" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Създай контакти") }}  
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- F.A.Q. -->
+    <div class="w-full min-h-96 relative pt-36">
+      <div class="grid place-items-center">
+          <div class="container mx-auto px-4 max-w-7xl relative">
+          <div class="bg-white">
+              <h3 class="font-semibold text-3xl mb-3">Често задавани въпроси</h3>
+              <p class="text-sm font-light text-gray-600 my-3">
+                В този раздел ще намерите отговори на често задаваните въпроси, свързани с платформата. Целта ни е да ви предоставим ясна и полезна информация, за да улесним вашето преживяване и взаимодействие с нас. Ако имате допълнителни въпроси, не се колебайте да се свържете с нас.
+              </p>
+              <div class="h-1 w-full mx-auto border-b-0 my-5"></div>
+              {{ partial "acordion-item-company.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+              {{ partial "acordion-item-company.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+              {{ partial "acordion-item-company.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+          </div>
+          </div>
       </div>
     </div>
 

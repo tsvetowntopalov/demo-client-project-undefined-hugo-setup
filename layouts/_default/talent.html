@@ -19,7 +19,7 @@
               </p>
             </div>
             <div>
-              <a href="#" class="bg-agora-talent-dark py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-talent-dark border border-agora-talent-dark transition-all">Започни сега</a>
+              <a href="{{ .Site.Params.registerUrlTalent }}" class="bg-agora-talent-color py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-talent-color border border-agora-talent-color transition-all">Започни сега</a>
             </div>
           </div>
           <div class="col-span-3 hidden md:block">
@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="container mx-auto px-4 max-w-7xl pt-24">
+    <div class="container mx-auto px-4 max-w-7xl pt-36">
       <div class="mb-10 text-center">
         <h2 class="font-semibold text-3xl mb-3">Защо да се включиш в @-GORA</h2>
         <div><small class="text-sm block">Запознай се с бенефитите на платформата за всички таланти</small></div>
@@ -48,7 +48,7 @@
               <img class="absolute max-w-[700px] right-48 top-1 opacity-10 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
               <div class="relative">
                 <h3 class="font-semibold text-lg mb-10">Създай своя персонализиран профил сега</h3>
-                <a href="#" class="bg-agora-talent-dark py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-talent-dark border border-agora-talent-dark transition-all">Започни сега</a>
+                <a href="{{ .Site.Params.registerUrlTalent }}" class="bg-agora-talent-dark py-3 px-12 inline-block text-sm font-semibold text-white rounded-3xl hover:bg-white hover:text-agora-talent-dark border border-agora-talent-dark transition-all">Започни сега</a>
               </div>
             </div>
           </div>
@@ -58,23 +58,65 @@
 
 
     <!-- COLORED GRAPH BLOCK -->
-    <div class="container mx-auto px-4 max-w-7xl pt-40">
-      <div class="mb-10">
-        <h2 class="font-semibold text-3xl mb-3">Как работи @-GORA</h2>
-        <div><small class="text-sm">Основни стъпки на процеса за работа на платформата</small></div>
+    <div class="pt-36">
+      <div class="container mx-auto px-4 max-w-7xl mb-8">
+        <div>
+          <h2 class="font-semibold text-3xl mb-3">Как работи @-GORA</h2>
+          <div><small class="text-sm">Основни стъпки на процеса за работа на платформата</small></div>
+        </div>
       </div>
-    </div>
-    <div class="w-full bg-agora-talent-color min-h-96 relative py-10">
-      <img class="absolute max-w-[1100px] w-3/4 -left-5 top-1 opacity-20 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
-      <div class="container mx-auto px-4 max-w-7xl relative">
-        <div class="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-8">
-          {{ partial "talent-color-grid-block.html" (dict "stepNum" "1" "titleText" "Създаваш профил в @-GORA" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Създай профил") }}
-          {{ partial "talent-color-grid-block.html" (dict "stepNum" "2" "titleText" "Избираш проект или състезание, по които искаш да работиш" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Избери състезание") }}
-          {{ partial "talent-color-grid-block.html" (dict "stepNum" "3" "titleText" "Получаваш обратна връзка, награда и дори предложение за работа" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Вземи обратна връзка") }}
-          {{ partial "talent-color-grid-block.html" (dict "stepNum" "4" "titleText" "Създаваш силен профил, привлекателен за компаниите" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Подобри профила си") }}  
+      <div class="w-full bg-agora-talent-color min-h-96 relative py-10">
+        <img class="absolute max-w-[1100px] w-3/4 -left-5 top-1 opacity-20 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
+        <div class="container mx-auto px-4 max-w-7xl relative">
+          <div class="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+            {{ partial "talent-color-grid-block.html" (dict "stepNum" "1" "titleText" "Създаваш профил в @-GORA" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Създай профил") }}
+            {{ partial "talent-color-grid-block.html" (dict "stepNum" "2" "titleText" "Избираш проект или състезание, по които искаш да работиш" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Избери състезание") }}
+            {{ partial "talent-color-grid-block.html" (dict "stepNum" "3" "titleText" "Получаваш обратна връзка, награда и дори предложение за работа" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Вземи обратна връзка") }}
+            {{ partial "talent-color-grid-block.html" (dict "stepNum" "4" "titleText" "Създаваш силен профил, привлекателен за компаниите" "buttonLink" .Site.Params.registerUrlTalent "buttonText" "Подобри профила си") }}  
+          </div>
         </div>
       </div>
     </div>
 
 
-    {{ partial "footer.html" . }}
+  <!-- AGORA OPPORTUNITIES-->
+  <div class="container mx-auto px-4 max-w-7xl relative pt-36">
+    <div class="bg-white">
+      <h3 class="font-semibold text-3xl mb-8">Топ възможностите в @-GORA</h3>
+      <div class="sm:grid sm:grid-cols-3 sm:gap-8">
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "1" "titleText" "Разглеждаш профили на компании") }}  
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "2" "titleText" "Участваш в състезания с награди") }}  
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "3" "titleText" "Достъп до практически библиотека с уебинари, книги и т.н.") }}  
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "4" "titleText" "Изграждаш име") }}  
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "5" "titleText" "Получаваш възнаграждение") }}  
+        {{ partial "simple-list-talent-item.html" (dict "stepNum" "6" "titleText" "Работиш по проекти") }}  
+      </div>
+    </div>
+  </div>
+
+
+    
+  <div class="w-full min-h-96 relative pt-36">
+    <div class="grid place-items-center">
+        <div class="container mx-auto px-4 max-w-7xl relative">
+        <div class="bg-white">
+            <h3 class="font-semibold text-3xl mb-3">Често задавани въпроси</h3>
+            <p class="text-sm font-light text-gray-600 my-3">
+              В този раздел ще намерите отговори на често задаваните въпроси, свързани с платформата. Целта ни е да ви предоставим ясна и полезна информация, за да улесним вашето преживяване и взаимодействие с нас. Ако имате допълнителни въпроси, не се колебайте да се свържете с нас.
+            </p>
+            <div class="h-1 w-full mx-auto border-b-0 my-5"></div>
+            {{ partial "acordion-item-talent.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+            {{ partial "acordion-item-talent.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+            {{ partial "acordion-item-talent.html" (dict "questionText" "When to use Accordion Components" "descriptionText" "Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.") }}  
+        </div>
+        </div>
+    </div>
+  </div>
+
+
+  {{ partial "footer.html" . }}
+
+
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+<!-- What is term -->
+<div class="transition border-b border-black/10 hover:bg-agora-company-light">
+    <!-- header -->
+    <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+        <i class="las la-plus-circle text-3xl -mt-0.5 text-agora-green-dark"></i>
+        <h3 class="font-medium text-lg">{{ .questionText }}</h3>
+    </div>
+    <!-- Content -->
+    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0 bg-agora-company-light">
+        <p class="leading-6 font-light pl-9 text-justify">
+        {{ .descriptionText }}
+        </p>
+        <button class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9">Learn more</button>
+    </div>
+</div>
