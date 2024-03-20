@@ -70,17 +70,17 @@
           <h2 class="font-semibold text-3xl text-white relative mt-8 px-4">Запознайте се с нашите планове за използване на платформата от бизнеса</h2>
         </div>
         <div class="mb-4 bg-agora-company-light/30 shadow-white hover:shadow-2xl hover:shadow-agora-company-light transition-all p-4 pb-28 relative rounded-lg">
-          <img class="w-full max-h-[100px] mt-8" src="{{ "images/forest-small.svg" | absURL }}">
+          <img class="w-full max-h-[100px] mt-8 mb-4 fill-agora-green-dark text-agora-green-dark" src="{{ "images/pillar.svg" | absURL }}">
           <h2 class="text-center font-bold text-xl text-agora-green-dark">Безплатен</h2>
           <ul class="p-4 mt-4 list-disk text-agora-green-dark/90 text-sm font-medium">
             <li class="py-1.5">Преглед и търсене на таланти</li>
             <li class="py-1.5">Публикуване на статии</li>
             <li class="py-1.5">Достъп до безплатно съдържание</li>
           </ul>
-          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-green-light hover:bg-agora-green-light/90 text-center text-sm font-medium rounded-3xl text-white" href="#">Запишeте се сега</a> 
+          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-green-light hover:bg-agora-green-light/90 text-center text-sm font-medium rounded-3xl text-white" href="{{ .Site.Params.registerUrlCompany }}">Започни сега</a> 
         </div>
         <div class="mb-4 bg-agora-company-light/50 shadow-sm shadow-white hover:shadow-2xl hover:shadow-agora-company-light transition-all p-4 pb-28 relative rounded-lg">
-          <img class="w-full max-h-[100px] mt-8" src="{{ "images/forest.svg" | absURL }}">
+          <img class="w-full max-h-[100px] mt-8 mb-4 fill-agora-green-dark text-agora-green-dark" src="{{ "images/pillars.svg" | absURL }}">
           <h2 class="text-center font-bold text-xl text-agora-green-dark">Професионален</h2>
           <ul class="p-4 mt-4 list-disk text-agora-green-dark/90 text-sm font-medium">
             <li class="py-1.5 font-semibold">+ Всичко от "Безплатен" план</li>
@@ -89,7 +89,7 @@
             <li class="py-1.5">Контакти с таланти</li>
             <li class="py-1.5">Брандиран профил на компанията</li>
           </ul>
-          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-talent-color hover:bg-agora-talent-color/90 text-center text-sm font-medium rounded-3xl text-white" href="#">Свържете се с нас</a> 
+          <a class="absolute bottom-8 left-8 right-8 p-4 bg-agora-talent-color hover:bg-agora-talent-color/90 text-center text-sm font-medium rounded-3xl text-white" href="{{ "contact" | relLangURL  }}">Свържете се с нас</a> 
         </div>
       </div>
       <div>
@@ -127,10 +127,10 @@
         <img class="absolute max-w-[1100px] w-3/4 -left-5 top-1 opacity-20 grayscale" src=" {{ "images/bubles-gray.svg" | absURL }} ">
         <div class="container mx-auto px-4 max-w-7xl relative">
           <div class="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-8">
-            {{ partial "company-color-grid-block.html" (dict "stepNum" "1" "titleText" "Създайте профил на компанията" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Създай профил") }}
-            {{ partial "company-color-grid-block.html" (dict "stepNum" "2" "titleText" "Публикувайте състезание или проект" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Публикувай състезание") }}
-            {{ partial "company-color-grid-block.html" (dict "stepNum" "3" "titleText" "Възнаградете най-добрите таланти с награда или с предложение за работа" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Възнагради таланти") }}
-            {{ partial "company-color-grid-block.html" (dict "stepNum" "4" "titleText" "Търсете в базата данни с таланти, харесайте и създайте контакти" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Създай контакти") }}  
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "1" "titleText" "Създайте профил на компанията" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Започни сега") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "2" "titleText" "Публикувайте състезание или проект" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Започни сега") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "3" "titleText" "Възнаградете най-добрите таланти с награда или с предложение за работа" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Започни сега") }}
+            {{ partial "company-color-grid-block.html" (dict "stepNum" "4" "titleText" "Търсете в базата данни с таланти, харесайте и създайте контакти" "buttonLink" .Site.Params.registerUrlCompany "buttonText" "Започни сега") }}  
           </div>
         </div>
       </div>
