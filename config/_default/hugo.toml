@@ -5,11 +5,13 @@ title = 'A-GORA'
 defaultContentLanguage = 'bg'
 defaultContentLanguageInSubdir = true
 canonifyURLs = true
+
 [params]
-  loginUrl = "https://app.a-gora.com/auth/login"
-  registerUrl = "https://app.a-gora.com/auth/signup"
-  registerUrlTalent = "https://app.a-gora.com/auth/signup?as=talent"
-  registerUrlCompany = "https://app.a-gora.com/auth/signup?as=business"
+  loginurl = "https://app.agora/auth/login"
+  registerurl = "https://app.agora/auth/signup"
+  registerurltalent = "https://app.agora/auth/signup?as=talent"
+  registerurlcompany = "https://app.agora/auth/signup?as=business"
+
 [languages]
   [languages.bg]
     languageCode = 'bg-BG'

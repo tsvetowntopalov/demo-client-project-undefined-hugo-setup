@@ -1,0 +1,27 @@
+baseURL = 'http://51.116.120.3'
+theme = 'agora'
+languageCode = 'en-us'
+title = 'A-GORA'
+defaultContentLanguage = 'bg'
+defaultContentLanguageInSubdir = true
+canonifyURLs = true
+
+[params]
+  loginurl = "https://app.a-gora.com/auth/login"
+  registerurl = "https://app.a-gora.com/auth/signup"
+  registerurltalent = "https://app.a-gora.com/auth/signup?as=talent"
+  registerurlcompany = "https://app.a-gora.com/auth/signup?as=business"
+
+[languages]
+  [languages.bg]
+    languageCode = 'bg-BG'
+    languageDirection = 'ltr'
+    languageName = 'Български'
+    title = 'А-ГОРА - LIVE'
+    weight = 1
+  [languages.en]
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    title = 'A-GORA - LIVE'
+    weight = 2
