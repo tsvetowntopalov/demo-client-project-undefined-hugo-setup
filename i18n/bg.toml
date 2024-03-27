@@ -1,38 +1,96 @@
-[more]
-other = "Още"
+# content/bg.toml
+[home_slogan]
+  text = "Където младото поколение и бизнеса се срещат"
 
-[allTitle]
-other = "Всички {{.Title }}"
+[home_desc_head]
+  text = "@-Gora е уеб платформа, която подпомага взаимодействието между младите хора, търсещи кариерен старт и бизнеса."
 
-[recentTitle]
-other = "Последни {{.Title }}"
+[home_desc_body]
+  text = "Платформата ангажира младите таланти и бизнеса да тестват взаимно уменията и възможностите си, чрез организирането на състезания и онлайн проекти. По този начин, те изграждат контакти и създават възможности за по-нататъшно сътрудничество."
 
-[readMore]
-other = "виж още"
+[home_talent_slogan]
+  text = "Бъди забелязан от топ компании"
 
-[whatsInThis]
-other = "Съдържание {{ .Type }}"
+[home_talent_description]
+  text = "Започни кариерата си на @-GORA."
 
-[related]
-other = "Подобни"
+[home_business_slogan]
+  text = "Свържете се с утрешните професионалисти сега"
 
-[yourName]
-other = "Вашето име"
+[home_business_description]
+  text = "Директен достъп до стотици млади таланти за твоя бизнес"
 
-[emailAddress]
-other = "Адрес на елекронна поща"
+[learn_more]
+  text = "Научи повече"
 
-[message]
-other = "Съобщение"
+[footer]
+  text = "Долен колонтитул"
 
-[emailRequiredNote]
-other = "Задължително е да предоставите адрес на електронна поща."
+[home]
+  text = "Начало"
 
-[send]
-other = "Изпрати"
+[talents]
+  text = "Таланти"
 
-[taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+[business]
+  text = "Бизнес"
 
-[pageTitle]
-other = "{{ .Name }} страница"
+[contacts]
+  text = "Контакти"
+  
+[register]
+  text = "Запиши се сега" 
+
+[start_now]
+  text = "Започни сега"
+  
+[login]
+  text = "Вход"
+
+[footer_slogan]
+  text = "Най-бързо растящата платформа свързваща таланти с реални компании."
+
+[quick_links]
+  text = "Бързи връзки"
+
+[explore_at_gora]
+  text = "Разгледай @-GORA"
+
+[legal]
+  text = "Легално"
+
+[all_rights_reserved]
+  text = "А-ГОРА ГРАФ ООД. Всички права запазени."
+
+[register_talent]
+  text = "Запиши се като Талант"
+
+[register_company]
+  text = "Запиши се като Бизнес"
+
+[find_projects]
+  text = "Как да намеря проекти ?"
+
+[view]
+  text = "Преглед"
+
+[for_business]
+  text = "За Бизнеса"
+
+[for_talents]
+  text = "За Таланти"
+
+[terms_of_use]
+  text = "Условия за ползване"
+
+[privacy_policy]
+  text = "Политика за поверителност"
+
+[cookies]
+  text = "Бисквитки"
+
+[copyright]
+  text = "Авторски права"
+
+[contact_location]
+  text = "София, България"

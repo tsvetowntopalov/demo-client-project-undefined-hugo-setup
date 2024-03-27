@@ -6,7 +6,7 @@
         <div class="space-y-8 xl:col-span-1">
           <img class="h-16 w-auto" src="{{ "images/logo-final.svg" | absURL }}" alt="Logo">
 
-          <p class="text-gray-500 text-base">Най-бързо растящата платформа свързваща таланти с реални компании.</p>
+          <p class="text-gray-500 text-base">{{ i18n "footer_slogan.text" }}</p>
           <div class="flex space-x-6">
             <a href="#" class="text-gray-400 hover:text-gray-500">
               <span class="sr-only">Facebook</span>
@@ -47,37 +47,65 @@
         <div class="mt-12 grid grid-cols-1 gap-8 xl:mt-0 xl:col-span-2">
           <div class="md:grid md:grid-cols-3 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Бързи връзки</h3>
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">{{ i18n "quick_links.text" }}</h3>
               <ul role="list" class="mt-4 space-y-4">
-                <li><a href="{{ .Site.Params.loginUrl }}" class="text-base text-gray-500 hover:text-gray-900"> Вход </a></li>
-                <li><a href="{{ .Site.Params.registerUrlTalent }}" class="text-base text-gray-500 hover:text-gray-900"> Запиши се като Талант </a></li>
-                <li><a href="{{ .Site.Params.registerUrlCompany }}" class="text-base text-gray-500 hover:text-gray-900"> Запиши се като Бизнес </a></li>
-                <li><a class="text-base text-gray-500 hover:text-gray-900"> Как да намеря проекти ? </a></li>
+                <li><a href="{{ .Site.Params.loginUrl }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "login.text" }} </a></li>
+                <li><a href="{{ .Site.Params.registerUrlTalent }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "register_talent.text" }} </a></li>
+                <li><a href="{{ .Site.Params.registerUrlCompany }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "register_company.text" }} </a></li>
+                <li><a class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "find_projects.text" }} </a></li>
               </ul>
             </div>
             <div class="mt-12 md:mt-0">
-              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Разгледай @-GORA</h3>
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">{{ i18n "explore_at_gora.text" }}</h3>
               <ul role="list" class="mt-4 space-y-4">
-                <li><a href="{{ "/" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> Преглед </a></li>
-                <li><a href="{{ "/company" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> За Бизнеса </a></li>
-                <li><a href="{{ "/talent" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> За Таланти </a></li>
+                <li><a href="{{ "/" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "view.text" }} </a></li>
+                <li><a href="{{ "/company" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "for_business.text" }} </a></li>
+                <li><a href="{{ "/talent" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "for_talents.text" }}  </a></li>
                 <!-- <li><a href="#" class="text-base text-gray-500 hover:text-gray-900"> Ментори </a></li> -->
               </ul>
             </div>
             <div>
               <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Легално</h3>
               <ul role="list" class="mt-4 space-y-4">
-                <li><a href="{{ "/terms" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> Условия за ползване </a></li>
-                <li><a href="{{ "/privacy" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> Политика за поверителност </a></li>
-                <li><a href="#" class="text-base text-gray-500 hover:text-gray-900"> Бисквитки </a></li>
-                <li><a href="#" class="text-base text-gray-500 hover:text-gray-900"> Авторски права </a></li>
+                <li><a href="{{ "/terms" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "terms_of_use.text" }} </a></li>
+                <li><a href="{{ "/privacy" | relLangURL  }}" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "privacy_policy.text" }} </a></li>
+                <li><a href="#" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "cookies.text" }} </a></li>
+                <li><a href="#" class="text-base text-gray-500 hover:text-gray-900"> {{ i18n "copyright.text" }} </a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="mt-12 border-t border-gray-200 pt-8">
-        <p class="text-base text-gray-400 xl:text-center">&copy; 2024 А-ГОРА ГРАФ ООД. Всички права запазени.</p>
+        <p class="text-base text-gray-400 xl:text-center">&copy; 2023 - {{ now.Format "2006" }} {{ i18n "all_rights_reserved.text" }}</p>
+
+        
+        {{ if .Site.IsMultiLingual }}
+        <div class="text-center flex justify-center items-center mt-4">
+        <div class="flex space-x-4">
+          {{ range .Site.Languages }}
+          {{ if eq . $.Site.Language }}
+            <div><span class="text-base font-semibold text-gray-900 cursor-default">{{ .LanguageName }}</span></div>
+          {{ else }}
+            {{ range $.Translations }}
+            <div><a href="{{ .Permalink }}" class="text-base font-normal text-gray-500 hover:text-gray-900">{{ .Language.LanguageName }}</a></div>
+            {{ end }}
+          {{ end }}
+          {{ end }}
+        </div>
+        </div>
+        {{ end }}
+        
+        
+                
+        
+        
+        
+        
+      
+      
+      
+      
       </div>
     </div>
   </footer>

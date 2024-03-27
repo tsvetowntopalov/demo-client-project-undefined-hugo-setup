@@ -1,49 +1,96 @@
-[more]
-other = "More"
+# content/en.toml
+[home_slogan]
+  text = "Where the young generation and business meet"
 
-[allTitle]
-other = "All {{.Title }}"
+[home_desc_head]
+  text = "@-Gora is a web platform that facilitates interaction between young people looking for a career start and businesses."
 
-[recentTitle]
-other = "Recent {{.Title }}"
+[home_desc_body]
+  text = "The platform engages young talents and businesses to mutually test their skills and opportunities through organizing competitions and online projects. This way, they build contacts and create opportunities for further collaboration."
 
-[readMore]
-other = "read more"
+[home_talent_slogan]
+text = "Get noticed by top companies"
 
-[by]
-other = "By"
+[home_talent_description]
+text = "Start your career on @-GORA."
 
-[whatsInThis]
-other = "What's in this {{ .Type }}"
+[home_business_slogan]
+text = "Connect with tomorrow's professionals today"
 
-[related]
-other = "Related"
+[home_business_description]
+text = "Direct access to hundreds of young talents for your business"
 
-[yourName]
-other = "Your Name"
+[learn_more]
+  text = "Learn more"
 
-[emailAddress]
-other = "Email Address"
+[footer]
+  text = "Footer"
 
-[message]
-other = "Message"
+[home]
+  text = "Home"
 
-[emailRequiredNote]
-other = "An email address is required."
+[talents]
+  text = "Talents"
 
-[send]
-other = "Send"
+[business]
+  text = "Business"
 
-[taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+[contacts]
+  text = "Contacts"
+  
+[register]
+  text = "Register now"
 
-[readingTime]
-one = "One minute read"
-other = "{{ .Count }} minutes read"
+[start_now]
+  text = "Start now"
+  
+[login]
+  text = "Login"
 
-[wordCount]
-one = "One word"
-other = "{{ .Count }} words"
+[footer_slogan]
+  text = "The fastest-growing platform connecting talents with real companies."
 
-[pageTitle]
-other = "{{ .Name }} page"
+[quick_links]
+  text = "Quick Links"
+
+[explore_at_gora]
+  text = "Explore @-GORA"
+
+[legal]
+  text = "Legal"
+
+[all_rights_reserved]
+  text = "A-GORA GRAPH LTD. All rights reserved."
+
+[register_talent]
+  text = "Sign Up as Talent"
+
+[register_company]
+  text = "Sign Up as Business"
+
+[find_projects]
+  text = "How to Find Projects?"
+
+[view]
+  text = "View"
+
+[for_business]
+  text = "For Business"
+
+[for_talents]
+  text = "For Talents"
+
+[terms_of_use]
+  text = "Terms of Use"
+
+[privacy_policy]
+  text = "Privacy Policy"
+
+[cookies]
+  text = "Cookies"
+
+[copyright]
+  text = "Copyright"
+
+[contact_location]
+  text = "Sofia, Bulgaria"

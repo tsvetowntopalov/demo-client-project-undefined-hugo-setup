@@ -20,8 +20,8 @@
             <img class="absolute top-full -translate-y-3/4 -right-96 w-full max-w-[700px] hidden sm:block" src="{{ "images/group2.svg" | absURL }}" alt="Group">
           </div>
           <div class="relative z-10 py-20">
-            <h1 class="text-white w-3/6 font-medium text-6xl">Където младото поколение и бизнеса се срещат</h1>
-            <a class="mt-28 inline-block text-white border-white border px-12 py-3 rounded-3xl text-sm hover:text-agora-green-light hover:bg-white transition-all" href="#learn-more">Научи повече</a>
+            <h1 class="text-white w-3/6 font-medium text-6xl">{{ i18n "home_slogan.text"}}</h1>
+            <a class="mt-28 inline-block text-white border-white border px-12 py-3 rounded-3xl text-sm hover:text-agora-green-light hover:bg-white transition-all" href="#learn-more">{{ i18n "learn_more.text"}}</a>
           </div>
         </div>
       </div>
@@ -33,23 +33,24 @@
         <img class="relative " src="{{ "images/people.svg" | absURL }}" alt="About the platform">
 
         <p class="text-white text-xl block pr-40 p-10">
-          <strong>A-gora е уеб платформа, която подпомага взаимодействието между младите хора, търсещи кариерен старт и бизнеса.</strong> <br /><br />
-          Платформата ангажира младите таланти и бизнеса да тестват взаимно уменията и възможностите си, чрез организирането на състезания и онлайн проекти. 
-          По този начин, те изграждат контакти и създават възможности за по-нататъшно сътрудничество.
+          <strong>{{ i18n "home_desc_head.text" }}</strong> <br /><br />
+          <span>
+            {{ i18n "home_desc_body.text" }}
+          </span>
         </p>
       </div>
     </div>
 
     <div class="container mx-auto px-4 max-w-7xl pt-56" id="learn-more">
       <div class="bg-gradient-to-r from-agora-talent-light to-white hover:to-agora-talent-light max-w-lg p-10 rounded-2xl relative shadow-sm shadow-green-100/0 hover:shadow-2xl transition-all">
-        <h2 class="font-semibold text-3xl">За Таланти</h2>
+        <h2 class="font-semibold text-3xl">{{ i18n "for_talents.text" }}</h2>
         <div class="mt-10 max-w-md">
-          <div class="font-semibold mb-10">Бъди забелязан от топ компании</div>
-          <div>Започни кариерата си на @-GORA.</div>
+          <div class="font-semibold mb-10">{{ i18n "home_talent_slogan.text" }}</div>
+          <div>{{ i18n "home_talent_description.text" }}</div>
         </div>
         <div class="mt-20">
-          <a href="{{ .Site.Params.registerUrlTalent }}" class="inline-block font-semibold bg-white text-agora-talent-dark border-agora-talent-dark border px-12 py-3 rounded-3xl text-sm hover:text-white hover:bg-agora-talent-dark transition-all">Започни сега</a>
-          <a href="{{ "/talent" | relLangURL  }}" class="inline-block font-semibold px-8 py-3 rounded-3xl text-sm hover:bg-white/50 transition-all ml-4">Научи повече</a>
+          <a href="{{ .Site.Params.registerUrlTalent }}" class="inline-block font-semibold bg-white text-agora-talent-dark border-agora-talent-dark border px-12 py-3 rounded-3xl text-sm hover:text-white hover:bg-agora-talent-dark transition-all">{{ i18n "start_now.text" }}</a>
+          <a href="{{ "/talent" | relLangURL  }}" class="inline-block font-semibold px-8 py-3 rounded-3xl text-sm hover:bg-white/50 transition-all ml-4">{{ i18n "learn_more.text" }}</a>
         </div>
         <img class="absolute top-10 left-full -translate-x-36 max-h-[300px] hidden sm:block" src="{{ "images/talents.svg" | absURL }}">
       </div>
@@ -60,14 +61,14 @@
       <div class="md:grid md:grid-cols-2 md:gap-8">
         <div class="relative col-start-2">
           <div class="bg-gradient-to-l from-agora-company-light to-white hover:to-agora-company-light max-w-lg p-10 rounded-2xl relative shadow-sm shadow-green-100/0 hover:shadow-2xl transition-all">
-            <h2 class="font-semibold text-3xl">За Компании</h2>
+            <h2 class="font-semibold text-3xl">{{ i18n "for_business.text" }}</h2>
             <div class="mt-10 max-w-md">
-              <div class="font-semibold mb-10">Свържете се с утрешните професионалисти сега.</div>
-              <div>Директен достъп до стотици млади таланти за твоя бизнес</div>
+              <div class="font-semibold mb-10">{{ i18n "home_business_slogan.text" }}</div>
+              <div>{{ i18n "home_business_description.text" }}</div>
           </div>
             <div class="mt-20">
-              <a href="{{ .Site.Params.registerUrlCompany }}" class="inline-block font-semibold bg-white text-agora-green-light border-agora-green-light border px-12 py-3 rounded-3xl text-sm hover:text-white hover:bg-agora-green-light transition-all">Започни сега</a>
-              <a href="{{ "/company" | relLangURL  }}" class="inline-block font-semibold px-8 py-3 rounded-3xl text-sm hover:bg-white/50 transition-all ml-4">Научи повече</a>
+              <a href="{{ .Site.Params.registerUrlCompany }}" class="inline-block font-semibold bg-white text-agora-green-light border-agora-green-light border px-12 py-3 rounded-3xl text-sm hover:text-white hover:bg-agora-green-light transition-all">{{ i18n "start_now.text" }}</a>
+              <a href="{{ "/company" | relLangURL  }}" class="inline-block font-semibold px-8 py-3 rounded-3xl text-sm hover:bg-white/50 transition-all ml-4">{{ i18n "learn_more.text" }}</a>
             </div>
             <img class="absolute top-5 right-full translate-x-10 max-h-[340px] hidden sm:block" src="{{ "images/companies.svg" | absURL }}">
           </div>
