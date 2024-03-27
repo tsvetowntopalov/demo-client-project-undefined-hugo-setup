@@ -1,4 +1,4 @@
-baseURL = 'http://51.116.120.3'
+baseURL = 'https://a-gora.com'
 theme = 'agora'
 languageCode = 'en-us'
 title = 'A-GORA'
