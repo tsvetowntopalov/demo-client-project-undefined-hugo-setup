@@ -1,26 +1,30 @@
 <div class="top-0 bg-white sticky z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center border-b-1 border-gray-100/1 py-6 md:justify-start md:space-x-10">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
+        <div class="flex justify-start lg:w-0 lg:flex-1 flex-grow sm:flex-grow-0">
           <a href="{{ "/" | relLangURL  }}">
             <span class="sr-only">A-GORA</span>
             <img class="h-8 w-auto sm:h-14" src="{{ "images/logo-final.svg" | absURL }}" alt="Logo">
           </a>
         </div>
-        <div class="-mr-2 -my-2 md:hidden">
-          <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+        <div class="-mr-2 -my-2 sm:hidden">
+          <button id="nav-button" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
-        <nav class="hidden md:flex space-x-10">
-          <a href="{{ "" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "home.text" }} </a>
-          <a href="{{ "talent" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "talents.text" }} </a>
-          <a href="{{ "company" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "business.text" }} </a>
-          <a href="{{ "contact" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "contacts.text" }} </a>
-        </nav>
+        <div id="nav-menu" class="hidden sm:block">
+          <nav class="absolute top-20 left-0 right-0 bg-white border-t border-t-gray-300 flex flex-col space-y-4 p-4 sm:static sm:flex-row sm:space-x-10 sm:space-y-0 sm:p-0">
+            <a href="{{ .Site.Params.registerurl }}" class="inline sm:hidden text-base font-medium text-agora-green-light hover:text-agora-green-dark"> {{ i18n "register.text" }} </a>
+            <a href="{{ .Site.Params.loginurl }}" class="inline sm:hidden text-base font-medium text-agora-green-light hover:text-agora-green-dark"> {{ i18n "login.text" }} </a>
+            <a href="{{ "" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "home.text" }} </a>
+            <a href="{{ "talent" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "talents.text" }} </a>
+            <a href="{{ "company" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "business.text" }} </a>
+            <a href="{{ "contact" | relLangURL  }}" class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ i18n "contacts.text" }} </a>
+          </nav>
+        </div>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <a href="{{ .Site.Params.registerurl }}" class="whitespace-nowrap text-base font-medium text-agora-green-light hover:text-gray-900"> {{ i18n "register.text" }} </a>
           <a href="{{ .Site.Params.loginurl }}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-agora-green-light hover:bg-agora-green-dark"> {{ i18n "login.text" }} </a>
@@ -28,3 +32,46 @@
       </div>
     </div>
 </div>
+<div id="nav-backdrop" class="hidden absolute bg-gray-900/90 z-20 left-0 top-0 h-full w-full">X</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  var navButton = document.getElementById('nav-button');
+  var navMenu = document.getElementById('nav-menu');
+  var navBackdrop = document.getElementById('nav-backdrop');
+  var navLinks = document.querySelectorAll('.nav-link');
+
+  // Toggle menu function
+  function toggleMenu() {
+    navMenu.classList.toggle('hidden');
+    navBackdrop.classList.toggle('hidden');
+  }
+
+  // Close menu function
+  function closeMenu() {
+    navMenu.classList.add('hidden');
+    navBackdrop.classList.add('hidden');
+  }
+
+  // Event listener for the button
+  navButton.addEventListener('click', function (e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    toggleMenu();
+  });
+
+  // Event listeners for links in the menu
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Event listener for the backdrop
+  navBackdrop.addEventListener('click', closeMenu);
+  
+  // Optional: Close menu when clicking anywhere else on the page
+  document.addEventListener('click', function (e) {
+    if (!navMenu.contains(e.target) && !navButton.contains(e.target)) {
+      closeMenu();
+    }
+  });
+});
+</script>
