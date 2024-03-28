@@ -9,14 +9,12 @@
 
     {{ partial "navigation.html" . }}
 
-    
-
     <!-- START: Heading -->
     <div class="relative bg-gray-100/1">
       <div class="container mx-auto px-4 max-w-7xl">
-        <div class="bg-agora-green-light w-full h-full absolute top-0 right-0 left-1/2 -translate-x-full"></div>
+        <div class="bg-agora-green-light w-full h-full absolute top-0 right-0 left-1/2 -translate-x-1/2 sm:-translate-x-full"></div>
         <div class="relative z-10 pr-8 min-h-[430px]">
-          <div class="absolute top-0 w-full h-full bg-agora-green-light translate-x-1/3 sm:-translate-x-1/4 rounded-2xl">
+          <div class="hidden sm:block absolute top-0 w-full h-full bg-agora-green-light translate-x-1/3 sm:-translate-x-1/4 rounded-2xl">
             <img class="absolute right-14 top-1" src="{{ "images/group1.svg" | absURL }}" alt="Group of people">
             <img class="absolute top-full -translate-y-3/4 -right-96 w-full max-w-[700px] hidden sm:block" src="{{ "images/group2.svg" | absURL }}" alt="Group">
           </div>
